@@ -32,10 +32,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `npm run eject`
 
 # Clone this repository
-$ git clone link repostory
-
-# Go into the repository
-$ cd electron-markdownify
+$ git clone https://github.com/giancobll/ProyectoFinalBarmaimon
 
 # Install dependencies
 $ npm install
