@@ -5,6 +5,8 @@ const products = [
         price: 32,
         description: "Correa gruesa de nylon resistente de 150cm reflectiva.",
         img: "https://i.ibb.co/XSH2s66/correa1.webp",
+        offer: 20,
+        stock: 30,
         category: "perros"
     },
     {
@@ -13,6 +15,8 @@ const products = [
         price: 50,
         description: "Correa de cinta retráctil para perros, 3 metros de longitud fabricada en nylon",
         img: "https://i.ibb.co/XjN0LGC/correa2.png",
+        offer: 13,
+        stock: 30,
         category: "perros"
     }, 
     {
@@ -20,7 +24,8 @@ const products = [
         title: "Correa para Perros para Amarrar a La Cintura" ,
         price: 35,
         description: "Correa para amarrar a la cintura y que tus manos queden libres",
-        img: "https://i.ibb.co/7CywM4g/correa3.png",
+        img: "https://i.ibb.co/7CywM4g/correa3.png",        
+        stock: 30,
         category: "perros"
     },
     {
@@ -29,6 +34,8 @@ const products = [
         price: 20,
         description: "Correa con pechera económica by Nutypet. *Los colores y el estampado pueden variar",
         img: "https://i.ibb.co/YyKtTYv/correa4.png",
+        offer: 10,
+        stock: 30,
         category: "perros"
     },
     {
@@ -37,6 +44,7 @@ const products = [
         price: 60,
         description: "Pechera reversible. Hecha de neopreno y poliéster. Suave al tacto y transpirable",
         img: "https://i.ibb.co/JrmQMNk/pechera1.png",
+        stock: 30,
         category: "perros"
     }, 
     {
@@ -45,6 +53,7 @@ const products = [
         price: 73,
         description: "Pechera reversible. Hecha de neopreno y poliéster. Suave al tacto y transpirable",
         img: "https://i.ibb.co/93sRXwQ/pechera2.png",
+        stock: 30,
         category: "perros"
     }, 
     {
@@ -53,6 +62,8 @@ const products = [
         price: 63,
         description: "Pechera reversible. Hecha de neopreno y poliéster. Suave al tacto y transpirable",
         img: "https://i.ibb.co/VTcG2yn/pechera3.png",
+        offer: 25,
+        stock: 30,
         category: "perros"
     }, 
     {
@@ -61,6 +72,7 @@ const products = [
         price: 70,
         description: "Pechera reversible. Hecha de neopreno y poliéster. Suave al tacto y transpirable",
         img: "https://i.ibb.co/x5FpGZ8/pechera4.png",
+        stock: 30,
         category: "perros"
     }, 
     {
@@ -69,6 +81,7 @@ const products = [
         price: 35.90,
         description: "Brinda a tu mascota su comida y agua en la cantidad ideal. Con bordes antideslizantes",
         img: "https://i.ibb.co/fG7WdNw/plato1.png",
+        stock: 30,
         category: "perros"
     }, 
     {
@@ -77,6 +90,8 @@ const products = [
         price: 38,
         description: "Fabricado en aluminio resistente higiénico y fácil de limpiar",
         img: "https://i.ibb.co/YdR9dhr/plato2.png",
+        offer: 18,
+        stock: 30,
         category: "perros"
     }, 
     {
@@ -85,6 +100,7 @@ const products = [
         price: 30,
         description: "Plato en acero inoxidable, repujado con antideslizante ideal para gatos",
         img: "https://i.ibb.co/f41q7sw/plato3.png",
+        stock: 30,
         category: "gatos"
     }, 
     {
@@ -93,6 +109,8 @@ const products = [
         price: 19,
         description: "Evita que tu perro se atragante y coma muy rápido. Ayuda en una digestión adecuada",
         img: "https://i.ibb.co/prhmpXV/plato4.jpg",
+        offer: 30,
+        stock: 30,
         category: "perros"
     }, 
     {
@@ -101,6 +119,7 @@ const products = [
         price: 24,
         description: "Plato doble, antideslizante y antiderrame. Incluye plato de acero",
         img: "https://i.ibb.co/8s4qcJ2/plato5.png",
+        stock: 30,
         category: "perros"
     }, 
     {
@@ -109,6 +128,7 @@ const products = [
         price: 74,
         description: "Capacidad de 1L de agua, tiene filtros que eliminan impurezas. Con sensor de luz nocturna",
         img: "https://i.ibb.co/X48h1bt/bebedero1.png",
+        stock: 30,
         category: "gatos"
     }, 
     {
@@ -117,6 +137,8 @@ const products = [
         price: 52,
         description: "Incentiva a tu gato a beber agua limpia. Incluye pastilla dental. Capacidad 1,2 litros",
         img: "https://i.ibb.co/WPVXx7q/bebedero2.png",
+        offer: 18,
+        stock: 30,
         category: "gatos"
     }, 
     {
@@ -125,6 +147,7 @@ const products = [
         price: 349.90,
         description: "Madera industrial resistente. Forro importado. Poste con sogas engomadas. Medidas: 147x54x46 cms",
         img: "https://i.ibb.co/PFScp16/rascador1.png",
+        stock: 30,
         category: "gatos"
     }, 
     {
@@ -133,6 +156,7 @@ const products = [
         price: 199,
         description: "Rascador de 2 pisos de madera y forrado con tela peluche. Medidas: 55x55x70 cms",
         img: "https://i.ibb.co/wNR16Jh/rascador2.png",
+        stock: 30,
         category: "gatos"
     }, 
     {
@@ -141,6 +165,7 @@ const products = [
         price: 107,
         description: "Rascador para gatos con doble torre forrado con tela peluche. Medidas: 55x55x60",
         img: "https://i.ibb.co/NSgXSr7/rascador3.png",
+        stock: 30,
         category: "gatos"
     }, 
     {
@@ -149,6 +174,8 @@ const products = [
         price: 99.9,
         description: "Comida para perros MIMASKOT adultos raza medianas y grandes cordero y cereales. Bolsa de 15Kg",
         img: "https://i.ibb.co/P4jmLgj/comidaperro1.png",
+        offer: 25,
+        stock: 30,
         category: "perros"
     }, 
     {
@@ -157,6 +184,7 @@ const products = [
         price: 95.90,
         description: "Bolsa 8 kilos, alimento para perros. Para adultos de más de 7 años. Todos los tamaños",
         img: "https://i.ibb.co/m5N5DKM/comidaperro2.png",
+        stock: 30,
         category: "perros"
     }, 
     {
@@ -165,6 +193,7 @@ const products = [
         price: 159.90,
         description: "Dog Chow con Extralife, mezcla antioxidantes, vitaminas y minerales para tu cachorro",
         img: "https://i.ibb.co/BcJDDbn/comidaperro3.png",
+        stock: 30,
         category: "perros"
     }, 
     {
@@ -173,6 +202,8 @@ const products = [
         price: 65.90,
         description: "Alimento 100% completo y balanceado para cachorros de raza pequeña. Reforzado con DHA",
         img: "https://i.ibb.co/j5zm7tY/comidaperro4.png",
+        offer: 10,
+        stock: 30,
         category: "perros"
     }, 
     {
@@ -181,6 +212,7 @@ const products = [
         price: 45,
         description: "Alimento para gatos y gatitos más completo del mercado. Garantiza una total nutrición y salud",
         img: "https://i.ibb.co/4dkqmTW/comidagato1.png",
+        stock: 30,
         category: "gatos"
     }, 
     {
@@ -189,6 +221,7 @@ const products = [
         price: 42.5,
         description: "Alimento completo y balanceado para gatos adultos, con ingredientes nobles de alto valor",
         img: "https://i.ibb.co/DgV44Pt/24comidagato2.png",
+        stock: 30,
         category: "gatos"
     }, 
     {
@@ -197,6 +230,7 @@ const products = [
         price: 72.80,
         description: "Alimento para gatos adultos castrados de 1 a 7 años. Previenen la acumulación de bolas de pelo",
         img: "https://i.ibb.co/5MwkVgk/comidagato3.png",
+        stock: 30,
         category: "gatos"
     }, 
     {
@@ -205,6 +239,8 @@ const products = [
         price: 28.5,
         description: "Alimento completo y balanceado de alta calidad, con linaza y fibra de remolacha",
         img: "https://i.ibb.co/TLb9GRf/comidagato4.png",
+        offer: 15,
+        stock: 30,
         category: "gatos"
     }, 
     {
@@ -213,6 +249,7 @@ const products = [
         price: 149.50,
         description: "Pastilla masticable que ofrece control de pulgas y garrapatas. Incl. 3 comprimidos. Peso de 2.5 a 5kg",
         img: "https://i.ibb.co/CHhKP5H/pastilla4.png",
+        stock: 30,
         category: "perros"
     },
     {
@@ -221,6 +258,7 @@ const products = [
         price: 179.90,
         description: "Pastilla masticable que ofrece control de pulgas y garrapatas. Incl. 3 comprimidos. Peso de 5 a 10kg",
         img: "https://i.ibb.co/rykQ6jW/pastilla1.png",
+        stock: 30,
         category: "perros"
     }, 
     {
@@ -229,6 +267,7 @@ const products = [
         price: 203,
         description: "Pastilla masticable que ofrece control de pulgas y garrapatas. Incl. 3 comprimidos. Peso de 10 a 20kg",
         img: "https://i.ibb.co/mFBZCMb/pastilla2.png",
+        stock: 30,
         category: "perros"
     }, 
     {
@@ -237,6 +276,7 @@ const products = [
         price: 225.90,
         description: "Pastilla masticable que ofrece control de pulgas y garrapatas. Incl. 3 comprimidos. Peso de 20 a 40kg",
         img: "https://i.ibb.co/17XNhWP/pastilla3.png",
+        stock: 30,
         category: "perros"
     }, 
     {
@@ -245,6 +285,8 @@ const products = [
         price: 140,
         description: "Tratamiento oral que elimina pulgas y garrapatas. Incl. 3 comprimidos. Proporciona un mes de protección",
         img: "https://i.ibb.co/k0GT4rx/pastilla5.png",
+        offer: 25,
+        stock: 30,
         category: "perros"
     }, 
     {
@@ -253,6 +295,7 @@ const products = [
         price: 160,
         description: "Tratamiento oral que elimina pulgas y garrapatas. Incl. 3 comprimidos. Proporciona un mes de protección",
         img: "https://i.ibb.co/k0GT4rx/pastilla5.png",
+        stock: 30,
         category: "perros"
     }];
 

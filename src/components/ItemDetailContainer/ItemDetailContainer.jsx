@@ -1,43 +1,53 @@
 import productsData from "../../Data/products";
-import { useParams } from "react-router-dom";
-import React, {useState,useEffect} from 'react'
-import ItemDetail from "../ItemDetail/ItemDetail";
-
-function getItem(idURL)
-{
-    const promesa = new Promise((resolve) => {
-        setTimeout(() => {
-            const found = productsData.find(item => {
-                return(item.id === parseInt(idURL))
-            })
-            resolve(found);
-        },2000)
-    });
-    return promesa;
-}
+import { useParams, Link } from "react-router-dom";
+import React, {useState,useEffect, useContext} from 'react'
+import './detailContainer.css'
+import ItemCount from "../ItemCount/ItemCount";
+import { cartContext } from "../../context/cartContext";
+import Loader from "../Loader/Loader";
+import { getItemDetail } from "../../services/firestore";
 
 function ItemDetailContainer()
 {
     const [product,setProduct] = useState([]);
+    const [addedToCart, setAdeddToCart] = useState(false);
 
     let{id} = useParams();   
 
+    
+    const {addItem} = useContext(cartContext);
+
     useEffect(() => {
-        getItem(id).then((respuesta) => {
+        getItemDetail(id).then((respuesta) => {
             console.log("promesa ok....", respuesta);
             setProduct(respuesta);
         });
     },[id])
+    
+     function handleAddCart(count)
+    {
+        addItem(product, count);
+        console.log('agregado al carrito');        
+    }
+
+    if(product.length === 0)
+    {
+        return <Loader/>        
+    }
 
     return(        
-        <ItemDetail
-         key={product.id}
-         id={product.id}
-         title={product.title}
-         price={product.price}
-         description={product.description}
-         img={product.img}
-        />                  
+        <div id={product.id}  className="card">
+            <div className='card-details'>
+                <div className='item-card-detail-img'>
+                    <img src={product.img} alt="imagen" />
+                </div>
+                <p className="text-title">{product.title}</p>
+                <p className="text-body">S/. {product.price}</p>                
+                <ItemCount handleAddCart={handleAddCart}/>                                                          
+            </div>                      
+        </div> 
+
+         
     )
 
 }

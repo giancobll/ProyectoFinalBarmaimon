@@ -6,7 +6,7 @@ function NavBar() {
     const styleIgm = 
     {        
         width: "60px"      
-    }
+    }   
 
     return (
         <>
@@ -23,13 +23,16 @@ function NavBar() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent" >
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/">Inicio</a>
+                                <Link className="nav-link active" aria-current="page" to="/">Inicio</Link>
                             </li>                            
                             <li className="nav-item">
-                                <a className="nav-link active" href="/category/perros">Doglovers 🐶</a>
+                                <Link className="nav-link active" to="/category/perros">Doglovers 🐶</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" href="/category/gatos">Catlovers 😺</a>
+                                <Link className="nav-link active" to="/category/gatos">Catlovers 😺</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link active" to="/carrito">Carrito 🛍</Link>
                             </li>
                         </ul>
                     </div>

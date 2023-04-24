@@ -31,6 +31,18 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run eject`
 
+# Clone this repository
+$ git clone link repostory
+
+# Go into the repository
+$ cd electron-markdownify
+
+# Install dependencies
+$ npm install
+
+# Run the app
+$ npm start
+
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
 If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.

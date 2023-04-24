@@ -1,29 +1,8 @@
 import React, { useState,useEffect } from "react";
 import Item from "../Item/Item";
-import productsData from "../../Data/products";
 import { useParams } from "react-router-dom";
-
-/* Mock Async Service */
-function getItems()
-{
-    const promesa = new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(productsData)
-        },2000);
-    });
-    return promesa;
-}
-
-function getItemsCategory(catURL)
-{
-    const promesa = new Promise((resolve) => {
-        setTimeout(() => {
-            const tipo = productsData.filter(item => item.category === catURL);
-            resolve(tipo);
-        },2000);
-    });
-    return promesa;
-}
+import Loader from "../Loader/Loader";
+import { getItemsList, getItemsCategory } from "../../services/firestore";
 
 function ItemListContainer()
 {
@@ -36,7 +15,7 @@ function ItemListContainer()
     {
         if(categoryid === undefined)
         {
-            getItems().then((respuesta) => {
+            getItemsList().then((respuesta) => {
                 setProducts(respuesta);
             });
         }
@@ -45,6 +24,11 @@ function ItemListContainer()
             getItemsCategory(categoryid).then((respuesta) => setProducts(respuesta));
         }
     },[categoryid]);
+
+    if(products.length === 0)
+    {
+        return <Loader/>
+    }
 
     return (
                               
@@ -55,6 +39,8 @@ function ItemListContainer()
                 title={producto.title}
                 price={producto.price}
                 description={producto.description}
+                offer={producto.offer}
+                stock={producto.stock}
                 img={producto.img}
             />
             ))

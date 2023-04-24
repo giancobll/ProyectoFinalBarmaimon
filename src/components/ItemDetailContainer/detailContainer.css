@@ -8,17 +8,23 @@
     border: 2px solid #c3c6ce;
     transition: 0.5s ease-out;
     overflow: visible;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 40px auto;
+    /*  margin-left: 10px;
+    margin-right: 10px; */
     text-align: center;
    }
    
    .card-details {
     color: black;
-    height: 100%;
+    height: 95%;
     gap: .5em;
     display: grid;
     place-content: center;
+   }
+
+   .item-card-buttons
+   {
+    margin-top: 80px;
    }
    
    .card-button {
@@ -50,8 +56,8 @@
 
    .item-card-detail-img 
 {
-    width: 450px;
-    height: 350px;
+    /* width: 450px; */
+    height: 310px;
     object-fit: cover;      
 }
 
