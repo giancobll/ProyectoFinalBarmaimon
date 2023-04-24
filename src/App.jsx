@@ -6,7 +6,6 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import Footer from "./components/Footer/footer";
 import { CartProvider } from "./context/cartContext";
 import CartContainer from "./components/CartContainer/CartContainer";
-import { exportData } from "./services/firestore";
 
 function App() 
 {  

@@ -5,8 +5,7 @@ function ItemCount({handleAddCart})
     const [count, setCount] = useState(0);
 
     function handleAdd()
-    {
-        //Agregar if para control de stock
+    {        
         setCount(count + 1);
     }
 

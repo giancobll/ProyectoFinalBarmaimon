@@ -18,8 +18,7 @@ function Item(props)
                 <img src={props.img} alt="imagen" />
             </div>
             <div className='item-card-detail'>
-                {props.offer&&<h4 style={{color:'limegreen', fontWeight: 'bold'}}>{props.offer}%</h4>}                
-                {/* <h4>S/. {props.price}</h4> */}
+                {props.offer&&<h4 style={{color:'limegreen', fontWeight: 'bold'}}>{props.offer}%</h4>}            
                 <h4> S/. {finalPrice}{' '}
                 {props.offer && ( <span style={{ color: 'gray', textDecoration: 'line-through' }}>
                 S/. {props.price} </span>)}</h4>

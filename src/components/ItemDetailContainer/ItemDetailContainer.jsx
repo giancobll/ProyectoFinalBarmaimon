@@ -1,5 +1,4 @@
-import productsData from "../../Data/products";
-import { useParams, Link } from "react-router-dom";
+import { useParams} from "react-router-dom";
 import React, {useState,useEffect, useContext} from 'react'
 import './detailContainer.css'
 import ItemCount from "../ItemCount/ItemCount";
@@ -9,8 +8,7 @@ import { getItemDetail } from "../../services/firestore";
 
 function ItemDetailContainer()
 {
-    const [product,setProduct] = useState([]);
-    const [addedToCart, setAdeddToCart] = useState(false);
+    const [product,setProduct] = useState([]);  
 
     let{id} = useParams();   
 
