@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
-function ItemCount({handleAddCart})
+function ItemCount({handleAddCart, resetCount})
 {
     const [count, setCount] = useState(0);
 
@@ -15,14 +15,21 @@ function ItemCount({handleAddCart})
         {
             setCount(count - 1);
         }        
-    }    
+    }  
+    
+    function handleAddToCart()
+    {
+        handleAddCart(count);
+        setCount(0);
+        resetCount(true);
+    }
 
     return(
         <div>
             <button type="button" className="btn btn-primary" onClick={handleSubstract}> - </button>            
             <span>  { count }  </span>
             <button type="button" className="btn btn-primary" onClick={handleAdd}> + </button>
-            <button type="button" className="btn btn-success" onClick={() => handleAddCart(count)} style={{ margin: '0 10px' }}> Agregar al Carrito </button>
+            <button type="button" className="btn btn-success" onClick={handleAddToCart} style={{ margin: '0 10px' }}> Agregar al Carrito </button>
         </div>
     )
 

@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function FormCheckout({onCheckout})
 {
@@ -18,10 +19,18 @@ export default function FormCheckout({onCheckout})
         setUserData(newUserData);
     }
 
+    const navigateTo = useNavigate();
+
     function onSubmit(evt)
     {
         evt.preventDefault();
         onCheckout(userData);
+        setUserData({
+            username: '',
+            email: '',
+            phone: ''
+        });        
+        navigateTo('/');
     }
 
     function clearFormData(evt)
@@ -36,41 +45,68 @@ export default function FormCheckout({onCheckout})
 
     return(
         <>
-            <h1>Ingresa tus datos para completar la compra 🛒</h1>
-            <form>
-                <div className="form-group">
-                    <label className="label-input">Nombre</label>
-                    <input 
-                        value={userData.username}
-                        name='username'
+            <div>
+                <h1>Ingresa tus datos para completar la compra 🛒</h1>
+            </div>            
+            <div className="card">
+                <div className="card-body">
+                    <h5 className="card-title" style={{color:'black'}}>Formulario de Registro</h5>
+                    <form>
+                    <div className="form-group">
+                        <label for="username" className="label-input" style={{color:'black'}}>Nombre</label>
+                        <input
+                        id="username"
+                        name="username"
                         type="text"
+                        className="form-control"
+                        value={userData.username}
                         required
                         onChange={handleInputChange}
-                    />
-                </div>
-                <div className="form-group">
-                <label className="label-input">email</label>
-                    <input 
-                        value={userData.email}
-                        name='email'
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label for="email" className="label-input" style={{color:'black'}}>Email</label>
+                        <input
+                        id="email"
+                        name="email"
                         type="email"
+                        className="form-control"
+                        value={userData.email}
                         required
                         onChange={handleInputChange}
-                    />
-                </div>
-                <div className="form-group">
-                <label className="label-input">Teléfono</label>
-                    <input 
-                        value={userData.phone}
-                        name='phone'
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" className="label-input" style={{color:'black'}}>Teléfono</label>
+                        <input
+                        id="phone"
+                        name="phone"
                         type="number"
+                        className="form-control"
+                        value={userData.phone}
                         required
                         onChange={handleInputChange}
-                    />
+                        />
+                    </div>
+                    <button
+                        onClick={onSubmit}
+                        type="button"
+                        className="btn btn-success"
+                        style={{ margin: "0 10px" , marginTop: '20px'}}
+                    >
+                        Crear Orden
+                    </button>
+                    <button
+                        onClick={clearFormData}
+                        type="button"
+                        className="btn btn-danger"
+                        style={{ margin: "0 10px" , marginTop: '20px'}}
+                    >
+                        Cancelar
+                    </button>
+                    </form>
                 </div>
-                <button onClick={onSubmit} type="button" class="btn btn-success" style={{ margin: '0 10px' }}> Crear Orden </button>
-                <button onClick={clearFormData} type="button" class="btn btn-danger"> Cancelar </button>
-            </form>
+            </div>          
         </>
     )
 }

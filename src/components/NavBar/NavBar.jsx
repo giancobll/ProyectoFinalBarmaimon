@@ -10,7 +10,7 @@ function NavBar() {
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary bg-light fixed-top navbar-app">
+            <nav className="navbar navbar-expand-lg bg-body-tertiary bg-light navbar-app">
                 <div className="container-fluid" >                  
                     <ul class="navbar-nav">
                         <Link to={'/'} class="nav-item">                            

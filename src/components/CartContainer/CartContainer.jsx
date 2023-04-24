@@ -1,16 +1,22 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { cartContext } from "../../context/cartContext";
 import './cartContainer.css';
 import FormCheckout from "./FormCheckout";
 import Swal from "sweetalert2";
 import { createOrder } from "../../services/firestore";
+import { useNavigate } from "react-router-dom";
 
 
 function CartContainer()
 {
     const context = useContext(cartContext);
-    const {cart,getPriceInCart, removeItem, clearCart} = context;    
+    const {cart,getPriceInCart, removeItem, clearCart} = context;
+    const [isEmptyCart, setIsEmptyCart] = useState(cart.length === 0)  
+    const navigateTo = useNavigate();  
    
+    useEffect(() => {
+        setIsEmptyCart(cart.length === 0);
+    }, [cart]);
 
     async function handleCheckout(userData)
     {
@@ -32,6 +38,18 @@ function CartContainer()
         });
         clearCart();
     }
+
+    if (isEmptyCart) {
+        Swal.fire({
+          icon: "warning",
+          title: "Carrito vacío",
+          text: "No hay productos en el carrito",
+          showConfirmButton: true,
+        }).then(() => {
+          navigateTo('/')
+        });
+        return null;
+      }
 
     return(
         <>            

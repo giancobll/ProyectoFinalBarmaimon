@@ -8,7 +8,8 @@ import { getItemDetail } from "../../services/firestore";
 
 function ItemDetailContainer()
 {
-    const [product,setProduct] = useState([]);  
+    const [product,setProduct] = useState([]);     
+    const [resetCount, setResetCount] = useState(false); 
 
     let{id} = useParams();   
 
@@ -24,8 +25,8 @@ function ItemDetailContainer()
     
      function handleAddCart(count)
     {
-        addItem(product, count);
-        console.log('agregado al carrito');        
+        addItem(product, count);     
+        setResetCount(true);         
     }
 
     if(product.length === 0)
@@ -41,13 +42,10 @@ function ItemDetailContainer()
                 </div>
                 <p className="text-title">{product.title}</p>
                 <p className="text-body">S/. {product.price}</p>                
-                <ItemCount handleAddCart={handleAddCart}/>                                                          
+                <ItemCount handleAddCart={handleAddCart} resetCount={setResetCount}/>                                                          
             </div>                      
-        </div> 
-
-         
+        </div>          
     )
-
 }
 
 export default ItemDetailContainer;

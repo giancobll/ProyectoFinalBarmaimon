@@ -7,9 +7,9 @@ function CartWidget()
 {    
     const {getCountInCart} = useContext(cartContext);
 
-    return (
+    return(
         <Link to="/carrito" style={{ textDecoration: 'none' , color: 'black'}}>
-            <div> 🛒 <span>{getCountInCart()}</span> </div>
+            <div> 🛒{getCountInCart() > 0 && <span>{getCountInCart()}</span>}{' '} </div>
         </Link>
         
     )
